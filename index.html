@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meet Hot Women Near You | Beddme</title>
-  <meta name="description" content="Sign up for free and meet real women in your area. No credit card required.">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"/>
+  <title>Hot Women Nearby</title>
+  <meta name="description" content="Meet real local women – free & private.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9VLD02NMS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H9VLD02NMS');
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -20,41 +30,28 @@
     .container {
       max-width: 420px;
       width: 100%;
-      background-color: #2a2a2a;
+      background: #2a2a2a;
       border-radius: 12px;
-      padding: 30px 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
     }
     h1 {
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 10px;
-      text-align: center;
     }
-    .subtitle {
-      font-size: 16px;
+    p {
+      font-size: 15px;
       color: #ccc;
-      text-align: center;
       margin-bottom: 20px;
-    }
-    .benefits {
-      margin-bottom: 20px;
-    }
-    .benefits li {
-      margin-bottom: 10px;
-      list-style: none;
-      padding-left: 1em;
-      position: relative;
-    }
-    .benefits li::before {
-      content: '✔';
-      position: absolute;
-      left: 0;
-      color: #00e676;
     }
     .cta-button {
       display: block;
-      width: 100%;
-      text-align: center;
       padding: 14px;
       background-color: #00e676;
       color: #000;
@@ -63,46 +60,38 @@
       border: none;
       border-radius: 6px;
       text-decoration: none;
-      transition: background-color 0.3s;
       cursor: pointer;
+      animation: pulse 1.5s infinite;
     }
-    .cta-button:hover {
-      background-color: #00c965;
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
     .footer {
-      margin-top: 20px;
       font-size: 12px;
-      color: #999;
-      text-align: center;
-    }
-    .image-section {
-      width: 100%;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 20px;
-    }
-    .image-section img {
-      width: 100%;
-      display: block;
+      color: #888;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="image-section">
-      <img src="https://miro.medium.com/v2/resize:fit:1200/0*S-ntSDPcv4NmpYDY.jpg" alt="Attractive woman">
-    </div>
-    <h1>Looking to Meet Real Women Near You?</h1>
-    <p class="subtitle">Discover gorgeous women in your area. It’s fast, free, and no card required.</p>
-    <ul class="benefits">
-      <li>100% free to join</li>
-      <li>No credit card needed</li>
-      <li>Real, local women online now</li>
-      <li>Private & safe – just one click</li>
-    </ul>
-    <a class="cta-button" href="https://t.ancdu.link/341879/7272?bo=2753,2754,2755,2756&popUnder=true&aff_sub5=SF_006OG000004lmDN">Join Now – 100% Free</a>
-    <p class="footer">18+ only | Limited spots available</p>
+    <img src="https://miro.medium.com/v2/resize:fit:1200/0*S-ntSDPcv4NmpYDY.jpg" alt="Hot woman">
+    <h1>Hot Women Are Waiting</h1>
+    <p>Sign up now – it’s fast & free.</p>
+    <a class="cta-button" id="cta-btn" href="https://www.profitableratecpm.com/ce6ivccs53?key=4f6f1c61682bd4534e2d2f24c191fdd4">Enter Now</a>
+    <div class="footer">18+ only</div>
   </div>
+
+  <script>
+    document.getElementById('cta-btn').addEventListener('click', function() {
+      gtag('event', 'click', {
+        'event_category': 'CTA',
+        'event_label': 'Enter Now Button'
+      });
+    }, { once: true });
+  </script>
 </body>
 </html>
 
