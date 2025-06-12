@@ -3,95 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hot Women Nearby</title>
-  <meta name="description" content="Meet real local women – free & private.">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- Google tag (gtag.js) -->
+  <title>Watch Now</title>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9VLD02NMS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-H9VLD02NMS');
   </script>
 
   <style>
-    body {
+    html, body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: #1e1e1e;
-      color: #fff;
+      padding: 0;
+      background: #000;
+      height: 100%;
+      width: 100%;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      padding: 20px;
     }
-    .container {
-      max-width: 420px;
+
+    .video-thumb {
+      position: relative;
       width: 100%;
-      background: #2a2a2a;
+      max-width: 480px;
+      aspect-ratio: 16 / 9;
+      background-image: url('https://ei.phncdn.com/videos/202306/03/432786851/original/(m=eaSaaTbaAaaaa)(mh=vMVDB274bItZHO5Q)13.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      text-align: center;
-    }
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 15px;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-    .cta-button {
-      display: block;
-      padding: 14px;
-      background-color: #00e676;
-      color: #000;
-      font-weight: bold;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
+      overflow: hidden;
       cursor: pointer;
-      animation: pulse 1.5s infinite;
     }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      border: 4px solid #ff69b4; /* pink border */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulse 1.4s infinite;
+    }
+
+    .play-button::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 18px solid #ff69b4;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      margin-left: 5px;
+    }
+
     @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-    .footer {
-      font-size: 12px;
-      color: #888;
-      margin-top: 20px;
+      0% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.1); }
+      100% { transform: translate(-50%, -50%) scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://imggen.eporner.com/8482106/1080/1920/15.jpg" alt="Hot woman">
-    <h1>Hot Women Are Waiting</h1>
-    <p>Sign up now – it’s fast & free.</p>
-    <a class="cta-button" id="cta-btn" href="https://www.profitableratecpm.com/ce6ivccs53?key=4f6f1c61682bd4534e2d2f24c191fdd4">Enter Now</a>
-    <div class="footer">18+ only</div>
-  </div>
-
-  <script>
-    document.getElementById('cta-btn').addEventListener('click', function() {
-      gtag('event', 'click', {
-        'event_category': 'CTA',
-        'event_label': 'Enter Now Button'
-      });
-    }, { once: true });
-  </script>
+  <a href="https://www.profitableratecpm.com/ce6ivccs53?key=4f6f1c61682bd4534e2d2f24c191fdd4"
+     class="video-thumb"
+     onclick="gtag('event', 'click', {event_category: 'CTA', event_label: 'PlayButton'});">
+    <div class="play-button"></div>
+  </a>
 </body>
 </html>
+
 
